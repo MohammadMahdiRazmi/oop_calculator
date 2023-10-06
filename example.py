@@ -1,29 +1,28 @@
 class Calculator:
-    def __init__(self, number1, number2):
-        self.number1 = number1
-        self.number2 = number2
+    def add(self, x, y):
+        return x + y
 
-    def sum(self):
-        return self.number1 + self.number2
+    def subtract(self, x, y):
+        return x - y
 
-    def mines(self):
-        return self.number1 - self.number2
+    def multiply(self, x, y):
+        return x * y
 
-    def multiply(self):
-        return self.number1 * self.number2
+    def divide(self, x, y):
+        if y == 0:
+            return "nemitavanad 0 bashad"
+        return x / y
 
-    def divide(self):
-        return self.number1 - self.number2
+calculator = Calculator()
 
-output = Calculator(5, 5)
+result_add = calculator.add(5, 3)
+result_subtract = calculator.subtract(10, 4)
+result_multiply = calculator.multiply(6, 7)
+result_divide = calculator.divide(8, 2)
 
-output_sum = output.sum()
-output_mines = output.mines()
-output_multiply = output.multiply()
-output_divide = output.divide()
+print("sum:", result_add)
+print("sub:", result_subtract)
+print("multi:", result_multiply)
+print("div:", result_divide)
 
-print("sum:", output_sum)
-print("mines:", output_mines)
-print("Multiplication:", output_multiply)
-print("Division:", output_divide)
 
